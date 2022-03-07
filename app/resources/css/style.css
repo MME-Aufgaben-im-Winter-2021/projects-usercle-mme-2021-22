@@ -4,13 +4,7 @@
 
 /* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
 :root {
-    --turquoise-green: #b9e3c6ff;
-    --ocean-green: #59c9a5ff;
-    --ruby: #d81e5bff;
-    --prussian-blue: #23395bff;
-    --canary: #fffd98ff;
-    --snow: #f7f2f4ff;
-    --jet: #343434ff;
+    --lightblue: #39B3ED;
 }
 
 .attachment-full {
@@ -33,7 +27,7 @@ body {
 .ui {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
     padding: 0;
 }
@@ -41,4 +35,82 @@ body {
 .ui h1 {
     text-align: center;
     color: var(--jet);
+}
+
+div.topbar {
+    box-shadow: 0px 1px 5px grey;
+}
+
+ul.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10vw;
+    list-style-type: none;
+}
+
+li.logo {
+    width: 5vw;
+}
+
+li.link a {
+    color: var(--lightblue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.sidebar {
+    width: 2vw;
+}
+
+ul.sidebar {
+    width: 2vw;
+    height: 60vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: var(--lightblue);
+}
+
+div.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: 5vw;
+}
+
+div.card {
+    width: 25vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+div.header {
+    padding: 10px;
+    font-size: 20px;
+}
+
+div.header h2 {
+    margin: 0;
+}
+  
+div.container {
+    padding: 10px;
+}
+
+div.button-new-card {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--lightblue);
+    border-radius: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-align: center;;
 }

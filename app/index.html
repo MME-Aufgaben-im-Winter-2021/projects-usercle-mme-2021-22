@@ -10,10 +10,69 @@
 
 <body>
     <div class="ui">
-        <h1>MME: Projekte im WS 2021/22</h1>
+        <h1>Repository Name - Issue Name</h1>
+        <div class="topbar">
+            <ul class="topbar">
+                <li class="logo"><img src="resources/img/logo.svg"></li>
+                <li class="link"><a href="#">overview</a></li>
+                <li class="link"><a href="#">whiteboard</a></li>
+                <li class="link"><a href="#">project overview</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="sidebar">
+            <ul class="sidebar">
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </div>--->
+
+        <div class="cards">
+            <div class="card">
+                <div class="header">
+                    <h2>Titel 1</h2>
+                </div>            
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="header">
+                    <h2>Titel 2</h2>
+                </div>            
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="header">
+                    <h2>Titel 3</h2>
+                </div>            
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-new-card">+</div>
     </div>
 
-   <script type="module" src="./src/index.js"></script>
+    <!-- Template for single box, shown in whiteboard-->
+    <template id="box-template">
+        <div class="card">
+            <div class="header">
+                <h2>Titel 1</h2>
+            </div>
+          
+            <div class="container">
+                <p>Text 1</p>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
+
+
