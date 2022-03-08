@@ -57,6 +57,11 @@ li.link a {
     color: var(--lightblue);
     font-weight: bold;
     text-decoration: none;
+    
+}
+
+.topbar a:active {
+    color:goldenrod;
 }
 
 div.sidebar {
