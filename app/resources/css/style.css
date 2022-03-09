@@ -112,6 +112,7 @@ div.cards {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     width: 80vw;
     margin: 5vw;
 }
