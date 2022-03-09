@@ -8,9 +8,6 @@ class Card {
     }
 
     addCard() {
-        console.log("### addCard ausgeführt ###");
-
-        // Hier klonen und Einfügen
         let temp = document.getElementById("box-template");
         let clone = temp.content.cloneNode(true);
 
