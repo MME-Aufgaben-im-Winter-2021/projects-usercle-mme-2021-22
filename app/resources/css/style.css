@@ -128,6 +128,7 @@ div.cards {
 
 div.card {
     width: 25vw;
+    margin-bottom: 5vh;
     text-align: center;
     background-color: transparent;
     perspective: 1000px;
@@ -167,9 +168,27 @@ div.header {
 div.header h2 {
     margin: 0;
 }
+
+input.title-input {
+    width: calc(100% - 16px);
+    margin: 0;
+    display: none;
+}
   
 div.container {
-    padding: 10px;
+    padding: 20px;
+}
+
+input.text-input {
+    width: calc(100% - 16px);
+    margin: 0;
+    display: none;
+}
+
+div.turn, div.reverse {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 div.button-new-card {
