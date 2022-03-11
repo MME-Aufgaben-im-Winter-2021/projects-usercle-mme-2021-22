@@ -189,6 +189,8 @@ div.turn, div.reverse {
     position: absolute;
     width: 100%;
     bottom: 0;
+    background-color: var(--lightblue);
+    cursor: pointer;
 }
 
 div.button-new-card {

@@ -5,6 +5,11 @@ function turnCard(el) {
     innerCard.classList.add("card-inner-turn");
 }
 
+function reverseCard(el) {
+    let innerCard = el;
+    innerCard.classList.remove("card-inner-turn");
+}
+
 class Card {
 
     constructor(title, text){
@@ -62,4 +67,4 @@ class Card {
 
 export default Card;
 
-export { turnCard };
+export { turnCard, reverseCard };

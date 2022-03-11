@@ -1,5 +1,5 @@
 import Card from "../resources/js/cards/Card.js";
-import { turnCard } from "../resources/js/cards/Card.js";
+import { turnCard, reverseCard } from "../resources/js/cards/Card.js";
 
 var newCard = new Card("Title", "Beispieltext");
 
@@ -22,6 +22,14 @@ function initUI() {
         turn.addEventListener('click', function handleClick() {
             let innerCard = turnCardButton[i].parentNode.parentNode;
             turnCard(innerCard);
+        });
+    });
+
+    let reverseCardButton = document.querySelectorAll(".reverse");
+    reverseCardButton.forEach(function (reverse, i) {
+        reverse.addEventListener('click', function handleClick() {
+            let innerCard = reverseCardButton[i].parentNode.parentNode;
+            reverseCard(innerCard);
         });
     });
 }
