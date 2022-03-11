@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MME: Projekte im WS 2021/22</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#sortable" ).sortable();
+        } );
+    </script>
+</head>
+
+<body>
+    <div class="ui">
+        <div class="topbar">
+            <h1>Repository Name</h1>
+            <ul class="topbar">
+                <li class="logo"><img src="resources/img/logo.svg"></li>
+                <li class="link"><a href="overview.html">overview</a></li>
+                <li class="link"><a href="whiteboard.html">whiteboard</a></li>
+                <li class="link"><a href="project_overview.html">project overview</a></li>
+            </ul>
+        </div>
+
+        <!---<div class="sidebar">
+            <ul class="sidebar">
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </div>--->
+
+        <div class="cards" id="sortable">
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="header">
+                            <h2>Titel 1</h2>
+                            <input class="title-input" type="text"></input>
+                        </div>            
+                        <div class="container">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <input class="text-input" type="text"></input>
+                        </div>
+                        <div class="turn">
+                            turn
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Rückseite</h2>
+                        <div class="reverse">
+                            reverse
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="header">
+                            <h2>Titel 2</h2>
+                            <input class="title-input" type="text"></input>
+                        </div>            
+                        <div class="container">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <input class="text-input" type="text"></input>
+                        </div>
+                        <div class="turn">
+                            turn
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h2>Rückseite</h2>
+                        <div class="reverse">
+                            reverse
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button-new-card">+</div>
+
+    </div>
+
+    <!-- Template for single box, shown in whiteboard  -->
+    <template id="box-template">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="header">
+                        <h2>Titel 1</h2>
+                    </div>            
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </div>
+                    <div class="turn">
+                        turn
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h2>Rückseite</h2>
+                    <div class="reverse">
+                        reverse
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
+
+
