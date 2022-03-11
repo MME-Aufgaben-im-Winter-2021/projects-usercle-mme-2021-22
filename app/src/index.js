@@ -8,26 +8,25 @@ function init() {
 }
 
 function initUI() {
-    let addButton = document.querySelector(".button-new-card");
+    let addButton = document.querySelector(".button-new-card"),
+        editTitleButton = document.querySelector(".header h2"),
+        editTextButton = document.querySelector(".container p"),
+        turnCardButton = document.querySelectorAll(".turn"),
+        reverseCardButton = document.querySelectorAll(".reverse");
+
     addButton.addEventListener("click", createNewCard);
-
-    let editTitleButton = document.querySelector(".header h2");
     editTitleButton.addEventListener("click", editTitle);
-
-    let editTextButton = document.querySelector(".container p");
     editTextButton.addEventListener("click", editText);
 
-    let turnCardButton = document.querySelectorAll(".turn");
     turnCardButton.forEach(function (turn, i) {
-        turn.addEventListener('click', function handleClick() {
+        turn.addEventListener("click", function handleClick() {
             let innerCard = turnCardButton[i].parentNode.parentNode;
             turnCard(innerCard);
         });
     });
 
-    let reverseCardButton = document.querySelectorAll(".reverse");
     reverseCardButton.forEach(function (reverse, i) {
-        reverse.addEventListener('click', function handleClick() {
+        reverse.addEventListener("click", function handleClick() {
             let innerCard = reverseCardButton[i].parentNode.parentNode;
             reverseCard(innerCard);
         });
