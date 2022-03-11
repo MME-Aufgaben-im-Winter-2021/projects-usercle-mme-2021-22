@@ -5,6 +5,9 @@
 /* Beispiel für die einfache Einbindung eines Farbschema, generiert auf coolors.co */
 :root {
     --lightblue: #39B3ED;
+    --darkblue: #1D68A5;
+    --gold: #ECB855;
+    --lightgray: #EEEEEE;
 }
 
 .attachment-full {
@@ -34,7 +37,7 @@ body {
 
 .ui h1 {
     text-align: center;
-    color: var(--jet);
+    margin: 5px;
 }
 
 form {
@@ -74,6 +77,7 @@ ul.topbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
     margin-right: 10vw;
     list-style-type: none;
 }
@@ -82,15 +86,20 @@ li.logo {
     width: 5vw;
 }
 
+li.link {
+    display: inline-block;
+    padding: 0 5vw;
+    align-self: flex-end;
+}
+
 li.link a {
     color: var(--lightblue);
     font-weight: bold;
     text-decoration: none;
-    
 }
 
-.topbar a:active {
-    color:goldenrod;
+.topbar a:hover {
+    color:var(--gold);
 }
 
 div.sidebar {
@@ -119,8 +128,35 @@ div.cards {
 
 div.card {
     width: 25vw;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightgray);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-inner-turn {
+    transition: transform 0.8s;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: rotateY(180deg);
 }
 
 div.header {

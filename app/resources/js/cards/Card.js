@@ -1,5 +1,11 @@
 import { Observable, Event } from "../utils/Observer.js";
 
+function turnCard() {
+    console.log("test");
+    let innerCard = document.querySelector(".button-turn-card").parentNode.parentNode;
+    innerCard.classList.add("card-inner-turn");
+}
+
 class Card {
 
     constructor(title, text){
@@ -20,3 +26,5 @@ class Card {
 }
 
 export default Card;
+
+export { turnCard };
