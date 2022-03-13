@@ -1,5 +1,5 @@
 {
-  "name": "MME Projects",
+  "name": "MME_Projects",
   "version": "0.0.1",
   "description": "A template for your MME Projects",
   "type": "module",
@@ -32,6 +32,7 @@
     "open": "^8.4.0"
   },
   "dependencies": {
+    "appwrite": "^7.0.0",
     "eslint": "^8.10.0"
   }
 }
