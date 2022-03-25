@@ -1,7 +1,9 @@
+
 import Card from "./cards/Card.js";
 import { turnCard, reverseCard } from "./cards/Card.js";
 
 var newCard = new Card("Title", "Beispieltext");
+
 
 function init() {
   initUI();
@@ -31,7 +33,43 @@ function initUI() {
       reverseCard(innerCard);
     });
   });
+
+;
+
+
 }
+
+
+const appwrite = new Appwrite();
+
+appwrite
+    .setEndpoint('https://appwrite.software-engineering.education/v1') // Your API Endpoint
+    .setProject('6206641b3bb533548645') // Your project ID
+;
+
+appwrite.account.createOAuth2Session('github');
+
+promise.then(function (response) {
+    console.log(response); // Success
+}, function (error) {
+    console.log(error); // Failure
+});
+
+appwrite
+    .account.create('unique()', 'me@example.com', 'password', 'Jane Doe')
+        .then(response => {
+            console.log(response);
+        }, error => {
+            console.log(error);
+        });
+
+// Subscribe to files channel
+appwrite.subscribe('files', response => {
+    if(response.event === 'storage.files.create') {
+        // Log when a new file is uploaded
+        console.log(response.payload);
+    }
+});
 
 function createNewCard() {
   newCard.addCard();
@@ -44,5 +82,7 @@ function editTitle() {
 function editText() {
   newCard.editText();
 }
+
+
 
 init();
